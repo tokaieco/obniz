@@ -14,7 +14,7 @@ const SPAM_PREVENTION_MS = 2000;
 
 // ★ Python側の RECEIVERS リスト (共通定義)
 const RECEIVERS = [
-    {"id": "PC", "name": "ラインA", "mac": "10:68:38:e5:ca:31"}, // PC
+    {"id": "10:68:38:e5:ca:31", "name": "ラインA", "mac": "10:68:38:e5:ca:31"}, // PC
     {"id": "7873-1040",      "name": "ラインB", "mac": "a0:76:4e:7d:59:c8"}, // Gateway1
     {"id": "2544-5267",      "name": "ラインC", "mac": "60:55:f9:cd:d2:94"}, // Gateway2
     {"id": "6223-2809",      "name": "ラインD", "mac": "9c:9c:1f:0f:35:1c"}, // Gateway3
