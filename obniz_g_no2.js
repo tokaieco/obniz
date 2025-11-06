@@ -26,16 +26,17 @@ if (!THIS_GATEWAY_CONFIG) {
     console.error(`Error: Config not found for obniz ID ${THIS_GATEWAY_OBNIZ_ID}`);
 }
 
+// ★ 修正: 行頭の特殊な空白を削除
 const KNOWN_BEACONS = {
-  "ac:23:3f:ac:70:1f": "400-MMBLEBC5-1", 
-  "e2c56db5-dffb-48d2-b060-d0f5a71096e0": "400-MMBLEBC5-1",
-  "e02cc25e-0049-4185-832c-3a65db755d01": "NKH52W-ACS", 
-  "ea:77:79:fe:14:22": "RE-BC-BLE401W-1",
-  "2a:2c:03:7c:ef:4a": "RE-BC-BLE401W-2",
-  "d2:fc:53:ac:fa:31": "RE-BC-BLE401W-3",
-  "f4:2e:e9:f5:d4:55": "RE-BC-BLE401W-4",
-  "e0:15:03:73:1b:14": "RE-BC-BLE401W-5",
-  "d4:a0:e7:9b:6e:2a": "RE-BC-BLE401W-6",
+    "ac:23:3f:ac:70:1f": "400-MMBLEBC5-1", 
+    "e2c56db5-dffb-48d2-b060-d0f5a71096e0": "400-MMBLEBC5-1",
+    "e02cc25e-0049-4185-832c-3a65db755d01": "NKH52W-ACS", 
+    "ea:77:79:fe:14:22": "RE-BC-BLE401W-1",
+    "2a:2c:03:7c:ef:4a": "RE-BC-BLE401W-2",
+    "d2:fc:53:ac:fa:31": "RE-BC-BLE401W-3",
+    "f4:2e:e9:f5:d4:55": "RE-BC-BLE401W-4",
+    "e0:15:03:73:1b:14": "RE-BC-BLE401W-5",
+    "d4:a0:e7:9b:6e:2a": "RE-BC-BLE401W-6",
 };
 
 let lastSent = {};
@@ -43,6 +44,7 @@ let lastSent = {};
 const obniz = new Obniz(THIS_GATEWAY_OBNIZ_ID);
 
 obniz.onconnect = async function () {
+// ... (以降のコードは変更なし) ...
   // ★ デバッグ: 接続時にディスプレイ表示
   obniz.display.clear();
   obniz.display.print(`[${THIS_GATEWAY_CONFIG.name}] Online`);
