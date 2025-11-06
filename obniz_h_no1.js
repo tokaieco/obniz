@@ -30,7 +30,7 @@ const KNOWN_BEACONS = {
 // スパム防止: 同じビーコンを短時間で何回も送らないようにする
 let lastSent = {};
 
-const obniz = new Obniz();
+const obniz = new Obniz('7873-1040');
 
 obniz.onconnect = async function () {
   await obniz.ble.initWait();
@@ -83,3 +83,4 @@ obniz.onconnect = async function () {
 obniz.onclose = function () {
   console.log(`[Agent] obniz ${obniz.id} disconnected.`);
 };
+
